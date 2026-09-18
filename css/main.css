@@ -7,10 +7,10 @@
 }
 
 :root {
-    --color-bg: #f4f6f8;
-    --color-text: #1e293b;
-    --color-primary: #006eb6;
-    --color-primary-hover: #004f7f;
+    --color-bg: #D3BBA3;
+    --color-text: #8B865C;
+    --color-primary: #FFFFFF;
+    --color-primary-hover: #D87355;
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
