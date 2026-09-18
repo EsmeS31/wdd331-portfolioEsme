@@ -7,7 +7,7 @@
 }
 
 :root {
-    --color-bg: #D3BBA3;
+    --color-bg:  #D3BBA3;
     --color-text: #8B865C;
     --color-primary: #FFFFFF;
     --color-primary-hover: #D87355;
@@ -23,6 +23,7 @@ body {
     background-color: var(--color-bg);
     line-height: 1.6;
     padding: var(--space-lg);
+    min-height: 100vh;
 }
 
 a {
@@ -31,4 +32,68 @@ a {
 
 a:hover {
     color: var(--color-primary-hover);
+}
+
+header,
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 1.5rem 3rem;
+    background-color: var(--color-text);
+    border-radius: 2rem 2rem 0 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background-color: var(--color-primary);
+    border-radius: 3rem;
+}
+
+nav a {
+    color: #a7a396;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--color-primary-hover);
+}
+
+main {
+    padding: 5rem 4rem;
+    background-color: var(--color-primary);
+    border-radius: 0 0 2rem 2rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 380px;
+    gap: 3rem;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+}
+
+.hero h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-primary-hover);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hero p {
+    max-width: 450px;
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
