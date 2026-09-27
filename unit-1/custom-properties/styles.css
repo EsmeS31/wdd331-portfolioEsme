@@ -1,0 +1,213 @@
+/* ========================================
+   TOKENS
+   ======================================== */
+:root {
+    /* Colors */
+    --color-page-background: #D3BBA3;
+    --color-content-text: #8B865C;
+    --color-surface: #FFFFFF;
+    --color-link-accent: #D87355;
+    --color-tag-background: #F2E8DD;
+    --color-card-border: #E5DDD3;
+
+    /* Spacing */
+    --space-compact: 0.5rem;
+    --space-standard: 1rem;
+    --space-generous: 2rem;
+
+    /* Typography */
+    --font-body: Helvetica, Arial, sans-serif;
+    --font-size-base: 1rem;
+
+    /* Border radius and effects */
+    --radius-card: 0.75rem;
+    --radius-panel: 2rem;
+    --shadow-card: 0 0.35rem 1rem rgb(81 79 62 / 0.08);
+}
+
+/* ========================================
+   RESET
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+body {
+    min-height: 100vh;
+    padding: clamp(var(--space-standard), 4vw, var(--space-generous));
+    background-color: var(--color-page-background);
+    color: var(--color-content-text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+
+    a {
+        color: var(--color-link-accent);
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+        }
+    }
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(var(--space-standard), 4vw, var(--space-generous));
+    background-color: var(--color-surface);
+    border-radius: 0 0 var(--radius-panel) var(--radius-panel);
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-standard);
+    max-width: 1100px;
+    margin: 0 auto var(--space-standard);
+    padding: 1.25rem var(--space-generous);
+    background-color: var(--color-surface);
+    border-radius: 3rem;
+
+    a {
+        color: #a7a396;
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--color-link-accent);
+        }
+    }
+}
+
+/* ========================================
+   BOARD HEADER
+   ======================================== */
+.board-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(var(--space-generous), 5vw, 3rem);
+    background-color: var(--color-content-text);
+    color: var(--color-surface);
+    text-align: center;
+    border-radius: var(--radius-panel) var(--radius-panel) 0 0;
+
+    h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        line-height: 1.15;
+    }
+
+    p {
+        margin-top: var(--space-compact);
+        color: var(--color-tag-background);
+    }
+}
+
+/* ========================================
+   CARD GROUPS
+   ======================================== */
+.card-group {
+    margin-bottom: var(--space-generous);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin-bottom: var(--space-standard);
+        color: var(--color-content-text);
+        font-size: clamp(1.35rem, 3vw, 1.75rem);
+    }
+}
+
+/* ========================================
+   CARDS GRID
+   ======================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: calc(var(--space-standard) * 1.25);
+}
+
+/* ========================================
+   INDIVIDUAL CARDS
+   ======================================== */
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-generous);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card, 0 0.35rem 1rem rgb(0 0 0 / 0.08));
+
+    .card-tag {
+        align-self: flex-end;
+        margin-bottom: var(--space-standard);
+        padding: 0.2rem var(--space-compact);
+        background-color: var(--color-tag-background);
+        color: var(--color-content-text);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    h3 {
+        margin-bottom: var(--space-compact);
+        color: var(--color-content-text);
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    p {
+        color: var(--color-content-text);
+    }
+
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-compact);
+        margin-top: auto;
+        padding-top: var(--space-standard);
+        color: var(--color-content-text);
+        font-size: 0.9rem;
+
+        span {
+            overflow-wrap: anywhere;
+        }
+
+        a {
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+    }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.board-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-generous) var(--space-standard);
+    color: var(--color-content-text);
+    text-align: center;
+    border-top: 1px solid var(--color-card-border);
+}

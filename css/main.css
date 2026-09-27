@@ -14,7 +14,7 @@
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
-    --font-body: system-ui, -apple-system, sans-serif;
+    --font-body: helvetica, sans-serif;
 }
 
 body {
