@@ -1,0 +1,14 @@
+/* Color tokens: define all color values for the site.
+   Name by purpose (--color-primary, --color-surface)
+   not appearance (--blue, --light-gray). */
+:root {
+    --color-page-background: #d3bba3;
+    --color-surface: #ffffff;
+    --color-text: #8b865c;
+    --color-primary: #d87355;
+    --color-accent: #b96d4d;
+    --color-muted: #a7a396;
+    --color-border: #e5ddd3;
+    --color-tag-background: #f2e8dd;
+    --color-shadow: rgb(81 79 62 / 0.08);
+}

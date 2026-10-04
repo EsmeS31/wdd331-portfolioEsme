@@ -1,0 +1,13 @@
+/* Non-color tokens: spacing, typography, borders, shadows.
+   These values should be referenced by every other layer. */
+:root {
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+    --font-body: "Helvetica Neue", Arial, sans-serif;
+
+    --radius-sm: 0.75rem;
+    --radius-lg: 2rem;
+    --radius-pill: 999px;
+}
