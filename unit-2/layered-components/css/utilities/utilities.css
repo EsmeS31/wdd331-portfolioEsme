@@ -1,0 +1,14 @@
+/* Utility classes: single-purpose helpers.
+   These live in the last layer so they override components
+   by layer order without needing !important. */
+
+/* TODO: Add any utility classes you find useful */
+@layer utilities {
+    .text-center {
+        text-align: center;
+    }
+
+    .stack-sm > * + * {
+        margin-top: var(--space-sm);
+    }
+}
