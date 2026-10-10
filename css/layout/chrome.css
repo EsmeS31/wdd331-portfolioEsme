@@ -1,0 +1,33 @@
+.site-header,
+.page-shell {
+    width: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    padding-block: var(--space-large);
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-small) var(--space-large);
+    padding: var(--space-medium) var(--space-large);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-large);
+    background: var(--color-surface);
+}
+
+.site-nav a {
+    color: var(--color-content-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav .home-link {
+    color: var(--color-link-accent);
+}

@@ -7,34 +7,44 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="home-link" href="index.html" aria-current="page">Home</a>
+            <a href="unit-1/custom-properties/index.html">Custom Properties and Nesting</a>
+            <a href="unit-2/layered-components/index.html">Layered Components</a>
+            <a href="unit-2/postcss-demo/index.html">Choose Topic: Temple Factoids</a>
+        </nav>
+    </header>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="unit-1/custom-properties/index.html">Custom Properties and Nesting</a>
-        <a href="unit-2/layered-components/index.html">Layered Components</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <main class="page-shell">
+        <section class="hero" aria-labelledby="page-title">
+            <h1 id="page-title">Esme Sanchez</h1>
+            <h2>WDD 331R Advanced CSS</h2>
+            <h3>UI/UX Designer • Web Developer • Digital Content Creator</h3>
+            <p class="hero-description">
+                I design and build user-centered digital experiences
+                through UI/UX design, web development, and digital
+                content creation.
+            </p>
+        </section>
 
-<main>
-
-    <section class="hero">
-
-        <h1>Esme Sanchez</h1>
-
-        <h2>
-            UI/UX Designer • Web Developer • Digital Content Creator
-        </h2>
-
-        <p>
-            I design and build user-centered digital experiences
-            through UI/UX design, web development, and digital
-            content creation.
-        </p>
-
-</main>
-
+        <section class="coursework" aria-labelledby="coursework-title">
+            <h2 id="coursework-title">Coursework</h2>
+            <ul class="project-list">
+                <li class="project-card">
+                    <h3><a href="unit-1/custom-properties/index.html">Custom Properties and Nesting</a></h3>
+                    <p>Explore CSS custom properties, nesting, and a scripture study companion interface.</p>
+                </li>
+                <li class="project-card">
+                    <h3><a href="unit-2/layered-components/index.html">Layered Components</a></h3>
+                    <p>See a ward activity board built with reusable components and CSS layers.</p>
+                </li>
+                <li class="project-card">
+                    <h3><a href="unit-2/postcss-demo/index.html">Choose Topic: Temple Factoids</a></h3>
+                    <p>Compare temple facts in a responsive card layout styled with PostCSS and design tokens.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

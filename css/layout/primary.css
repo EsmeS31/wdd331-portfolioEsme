@@ -1,0 +1,43 @@
+.page-shell {
+    margin-bottom: var(--space-xlarge);
+    padding: clamp(var(--space-large), 6vw, var(--space-xlarge));
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-large);
+    background: var(--color-surface);
+}
+
+.hero {
+    max-width: 46rem;
+    margin: 0 auto var(--space-xlarge);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--text-title);
+    font-weight: 400;
+}
+
+.hero h2 {
+    margin-top: var(--space-medium);
+    color: var(--color-link-accent);
+    font-size: var(--text-large);
+    font-weight: 400;
+}
+
+.hero h3 {
+    margin-top: var(--space-medium);
+    font-size: var(--text-large);
+    font-weight: 600;
+}
+
+.hero-description {
+    max-width: 38rem;
+    margin: var(--space-medium) auto 0;
+    color: var(--color-content-text);
+}
+
+.coursework h2 {
+    margin-bottom: var(--space-large);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    text-align: center;
+}
