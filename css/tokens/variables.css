@@ -1,0 +1,14 @@
+:root {
+    --font-body: system-ui, sans-serif;
+    --font-heading: Georgia, serif;
+    --text-base: 1rem;
+    --text-large: 1.25rem;
+    --text-title: clamp(2.5rem, 8vw, 4.5rem);
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+    --space-xlarge: 4rem;
+    --radius-medium: 0.75rem;
+    --radius-large: 1.5rem;
+    --shadow-card: 0 0.25rem 1rem rgb(48 45 42 / 8%);
+}

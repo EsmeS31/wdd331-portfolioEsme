@@ -1,0 +1,30 @@
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background: var(--color-page-background);
+    color: var(--color-content-text);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-link-accent);
+    text-underline-offset: 0.2em;
+}
+
+a:hover {
+    text-decoration-thickness: 0.15em;
+}
+
+a:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
