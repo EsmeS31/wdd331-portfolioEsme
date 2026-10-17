@@ -10,5 +10,31 @@
     --space-xlarge: 4rem;
     --radius-medium: 0.75rem;
     --radius-large: 1.5rem;
-    --shadow-card: 0 0.25rem 1rem rgb(48 45 42 / 8%);
+    --shadow-card: 0 0.25rem 1rem rgb(51 58 28 / 12%);
+}
+
+
+:root {
+    /* Typography */
+    --font-family-sans: system-ui, sans-serif;
+    --font-family-mono: monospace;
+    --font-size-sm: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
+
+
+    /* Radii */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Transitions */
+    --transition-base: 0.2s ease;
+
+    /* Icons */
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+
+    /* Focus */
+    --outline-width: 2px;
 }

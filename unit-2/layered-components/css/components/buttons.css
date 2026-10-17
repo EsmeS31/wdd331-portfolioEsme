@@ -39,6 +39,10 @@
     .btn.primary {
         background-color: var(--color-primary);
         color: var(--color-surface);
+
+        &:not(:disabled):hover {
+            background-color: var(--color-accent);
+        }
     }
 
     .btn.secondary {

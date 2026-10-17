@@ -29,5 +29,5 @@
 
 .site-nav a:hover,
 .site-nav .home-link {
-    color: var(--color-link-accent);
+    color: var(--color-orange);
 }
