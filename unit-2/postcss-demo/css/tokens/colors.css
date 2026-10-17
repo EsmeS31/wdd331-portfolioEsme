@@ -1,10 +1,59 @@
+@import url('../../../../css/components/theme-toggle.css');
+
 :root {
-    --color-primary: #1d4e89;
-    --color-primary-light: #2a6cb5;
-    --color-text: #1a1a2e;
-    --color-text-muted: #555;
-    --color-bg: #f8f8f8;
-    --color-surface: #fff;
-    --color-accent: #b8860b;
-    --color-border: #ddd;
+    --color-primary: #8b865c;
+    --color-primary-light: #d87355;
+    --color-text: #333a1c;
+    --color-text-muted: #333a1c;
+    --color-bg: #d3bba3;
+    --color-surface: #ffffff;
+    --color-accent: #d87355;
+    --color-border: #d3bba3;
+    --color-on-primary: #333a1c;
+    --color-card-text: #333a1c;
+    --header-text: #ffffff;
+    --theme-toggle-bg: #8b865c;
+    --theme-toggle-bg-hover: #d87355;
+    --theme-toggle-border: #8b865c;
+    --theme-toggle-border-hover: #d87355;
+}
+
+:root[data-theme-preference='dark'] {
+    color-scheme: dark;
+    --color-primary: #b7b18b;
+    --color-primary-light: #ef8b6d;
+    --color-text: #fffdf7;
+    --color-text-muted: #d3bba3;
+    --color-bg: #25251f;
+    --color-surface: #33332a;
+    --color-accent: #ef8b6d;
+    --color-border: #555841;
+    --color-on-primary: #fffdf7;
+    --color-card-text: #fffdf7;
+    --header-text: #25251f;
+    --theme-toggle-bg: #b7b18b;
+    --theme-toggle-bg-hover: #ef8b6d;
+    --theme-toggle-border: #b7b18b;
+    --theme-toggle-border-hover: #ef8b6d;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root[data-theme-preference='system'] {
+        color-scheme: dark;
+        --color-primary: #b7b18b;
+        --color-primary-light: #ef8b6d;
+        --color-text: #fffdf7;
+        --color-text-muted: #d3bba3;
+        --color-bg: #25251f;
+        --color-surface: #33332a;
+        --color-accent: #ef8b6d;
+        --color-border: #555841;
+        --color-on-primary: #fffdf7;
+        --color-card-text: #fffdf7;
+        --header-text: #25251f;
+        --theme-toggle-bg: #b7b18b;
+        --theme-toggle-bg-hover: #ef8b6d;
+        --theme-toggle-border: #b7b18b;
+        --theme-toggle-border-hover: #ef8b6d;
+    }
 }

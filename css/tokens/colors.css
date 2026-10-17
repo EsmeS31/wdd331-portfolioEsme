@@ -1,8 +1,71 @@
 :root {
-    --color-page-background: #D3BBA3;
-    --color-content-text: #8B865C;
-    --color-surface: #FFFFFF;
-    --color-link-accent: #D87355;
-    --color-tag-background: #F2E8DD;
-    --color-card-border: #E5DDD3;
+    color-scheme: light;
+
+    /* ---- Seeds ---- */
+    --seed-bg: #d3bba3;
+    --seed-surface: #ffffff;
+    --seed-text: #333a1c;
+    --seed-text-muted: #8b865c;
+    --seed-olive: #8b865c;
+    --seed-orange: #d87355;
+    --seed-accent: var(--seed-orange);
+    --seed-accent-hover: var(--seed-olive);
+    --seed-link: var(--seed-accent);
+    --seed-link-hover: var(--seed-olive);
+    --seed-border: #d3bba3;
+    --seed-border-strong: #8b865c;
+
+    --color-page-background: var(--seed-bg);
+    --color-surface: var(--seed-surface);
+    --color-content-text: var(--seed-text);
+    --color-text-muted: var(--seed-text-muted);
+    --color-link-accent: var(--seed-orange);
+    --color-primary: var(--seed-olive);
+    --color-accent: var(--seed-orange);
+    --color-tag-background: var(--seed-bg);
+    --color-card-border: var(--seed-border);
+    --color-olive: var(--seed-olive);
+    --color-orange: var(--seed-orange);
+    --header-text: var(--seed-surface);
+    --theme-toggle-bg: var(--seed-olive);
+    --theme-toggle-bg-hover: var(--seed-orange);
+    --theme-toggle-border: var(--seed-olive);
+    --theme-toggle-border-hover: var(--seed-orange);
+}
+
+:root {
+    /* ---- Accent ramp ---- */
+    --accent-200: color-mix(in oklch, var(--seed-orange) 30%, white);
+    --accent-300: color-mix(in oklch, var(--seed-orange) 50%, white);
+    --accent-400: color-mix(in oklch, var(--seed-orange) 75%, white);
+    --accent-500: var(--seed-accent);
+    --accent-600: var(--seed-olive);
+    --accent-700: color-mix(in oklch, var(--seed-olive) 80%, black);
+    --accent-800: color-mix(in oklch, var(--seed-olive) 60%, black);
+}
+
+:root[data-theme-preference='dark'] {
+    color-scheme: dark;
+    --seed-bg: #25251f;
+    --seed-surface: #33332a;
+    --seed-text: #fffdf7;
+    --seed-text-muted: #d3bba3;
+    --seed-olive: #b7b18b;
+    --seed-orange: #ef8b6d;
+    --seed-border: #555841;
+    --seed-border-strong: #b7b18b;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root[data-theme-preference='system'] {
+        color-scheme: dark;
+        --seed-bg: #25251f;
+        --seed-surface: #33332a;
+        --seed-text: #fffdf7;
+        --seed-text-muted: #d3bba3;
+        --seed-olive: #b7b18b;
+        --seed-orange: #ef8b6d;
+        --seed-border: #555841;
+        --seed-border-strong: #b7b18b;
+    }
 }

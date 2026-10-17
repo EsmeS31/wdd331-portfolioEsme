@@ -19,7 +19,7 @@
 
 .hero h2 {
     margin-top: var(--space-medium);
-    color: var(--color-link-accent);
+    color: var(--color-olive);
     font-size: var(--text-large);
     font-weight: 400;
 }

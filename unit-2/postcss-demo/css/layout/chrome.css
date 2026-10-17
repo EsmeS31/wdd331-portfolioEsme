@@ -1,5 +1,30 @@
 .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md) var(--space-lg);
+    max-width: 68rem;
+    margin: 0 auto var(--space-md);
+    padding: 1.25rem var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3rem;
+    text-align: center;
     margin-bottom: var(--space-lg);
+
+    a {
+        color: var(--color-text);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover,
+        &:focus-visible,
+        &[aria-current="page"] {
+            color: var(--color-accent);
+        }
+    }
 }
 
 .page-footer {
