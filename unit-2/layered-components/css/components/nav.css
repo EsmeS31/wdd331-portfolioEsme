@@ -3,6 +3,10 @@
 
 /* TODO: Style the navigation */
 @layer components {
+    .site-header {
+        padding-block-start: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
     .site-nav {
         display: flex;
         justify-content: center;

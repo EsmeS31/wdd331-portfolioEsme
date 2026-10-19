@@ -1,5 +1,8 @@
 details.theme-menu {
-    position: relative;
+    position: fixed;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    z-index: 100;
     display: inline-block;
     width: max-content;
     margin: 0;
@@ -40,8 +43,8 @@ details.theme-menu {
         }
 
         &:focus-visible {
-            outline: 2px solid var(--color-accent, var(--color-orange, #d87355));
-            outline-offset: 2px;
+            outline: var(--outline-width) solid var(--color-focus-ring);
+            outline-offset: var(--outline-width);
         }
 
         &::before {
@@ -54,24 +57,24 @@ details.theme-menu {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-width: 3rem;
-        min-height: 3rem;
+        min-width: calc(var(--icon-size-md) + var(--spacing-md));
+        min-height: calc(var(--icon-size-md) + var(--spacing-md));
         margin: 0;
         padding: 0;
         font-size: var(--icon-size-sm);
         line-height: 1;
-        color: var(--header-text, #ffffff);
-        background-color: var(--theme-toggle-bg, var(--color-primary, #8b865c));
-        border: 1px solid var(--theme-toggle-border, var(--color-primary, #8b865c));
-        border-radius: 0.5rem;
+        color: var(--header-text);
+        background-color: var(--theme-toggle-bg);
+        border: 1px solid var(--theme-toggle-border);
+        border-radius: var(--radius-sm);
         cursor: pointer;
         transition:
-            background-color 0.2s ease,
-            border-color 0.2s ease;
+            background-color var(--transition-base),
+            border-color var(--transition-base);
 
         &:hover {
-            background-color: var(--theme-toggle-bg-hover, var(--color-accent, #d87355));
-            border-color: var(--theme-toggle-border-hover, var(--color-accent, #d87355));
+            background-color: var(--theme-toggle-bg-hover);
+            border-color: var(--theme-toggle-border-hover);
         }
     }
 
@@ -112,8 +115,8 @@ details.theme-menu {
         }
 
         &:has(input:focus-visible) {
-            outline: 2px solid var(--color-accent, var(--color-orange, #d87355));
-            outline-offset: 2px;
+            outline: var(--outline-width) solid var(--color-focus-ring);
+            outline-offset: var(--outline-width);
         }
     }
 }

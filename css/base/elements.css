@@ -5,7 +5,11 @@ body {
     color: var(--color-content-text);
     font-family: var(--font-body);
     font-size: var(--text-base);
-    line-height: 1.6;
+    line-height: 1.7;
+}
+
+p + p {
+    margin-block-start: var(--space-medium);
 }
 
 a {

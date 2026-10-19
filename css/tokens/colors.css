@@ -1,5 +1,5 @@
 :root {
-    color-scheme: light;
+    color-scheme: light dark;
 
     /* ---- Seeds ---- */
     --seed-bg: #d3bba3;
@@ -7,65 +7,86 @@
     --seed-text: #333a1c;
     --seed-text-muted: #8b865c;
     --seed-olive: #8b865c;
-    --seed-orange: #d87355;
-    --seed-accent: var(--seed-orange);
-    --seed-accent-hover: var(--seed-olive);
+    --seed-orange: var(--seed-accent);
+    --seed-accent: oklch(0.664337 0.134043 37.355);
+    --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
     --seed-link: var(--seed-accent);
     --seed-link-hover: var(--seed-olive);
     --seed-border: #d3bba3;
     --seed-border-strong: #8b865c;
 
-    --color-page-background: var(--seed-bg);
-    --color-surface: var(--seed-surface);
-    --color-content-text: var(--seed-text);
-    --color-text-muted: var(--seed-text-muted);
-    --color-link-accent: var(--seed-orange);
-    --color-primary: var(--seed-olive);
-    --color-accent: var(--seed-orange);
-    --color-tag-background: var(--seed-bg);
-    --color-card-border: var(--seed-border);
-    --color-olive: var(--seed-olive);
-    --color-orange: var(--seed-orange);
-    --header-text: var(--seed-surface);
-    --theme-toggle-bg: var(--seed-olive);
-    --theme-toggle-bg-hover: var(--seed-orange);
-    --theme-toggle-border: var(--seed-olive);
-    --theme-toggle-border-hover: var(--seed-orange);
-}
-
-:root {
     /* ---- Accent ramp ---- */
-    --accent-200: color-mix(in oklch, var(--seed-orange) 30%, white);
-    --accent-300: color-mix(in oklch, var(--seed-orange) 50%, white);
-    --accent-400: color-mix(in oklch, var(--seed-orange) 75%, white);
+    --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
+    --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
+    --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
     --accent-500: var(--seed-accent);
-    --accent-600: var(--seed-olive);
-    --accent-700: color-mix(in oklch, var(--seed-olive) 80%, black);
-    --accent-800: color-mix(in oklch, var(--seed-olive) 60%, black);
+    --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
+    --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
 }
 
+/* Theme selection sets color-scheme before light-dark() tokens resolve. */
+:root:has(input[name='theme-preference'][value='light']:checked),
+:root[data-theme-preference='light'] {
+    color-scheme: light;
+}
+
+:root:has(input[name='theme-preference'][value='dark']:checked),
 :root[data-theme-preference='dark'] {
     color-scheme: dark;
-    --seed-bg: #25251f;
-    --seed-surface: #33332a;
-    --seed-text: #fffdf7;
-    --seed-text-muted: #d3bba3;
-    --seed-olive: #b7b18b;
-    --seed-orange: #ef8b6d;
-    --seed-border: #555841;
-    --seed-border-strong: #b7b18b;
 }
 
 @media (prefers-color-scheme: dark) {
+    :root:has(input[name='theme-preference'][value='system']:checked),
     :root[data-theme-preference='system'] {
         color-scheme: dark;
-        --seed-bg: #25251f;
-        --seed-surface: #33332a;
-        --seed-text: #fffdf7;
-        --seed-text-muted: #d3bba3;
-        --seed-olive: #b7b18b;
-        --seed-orange: #ef8b6d;
-        --seed-border: #555841;
-        --seed-border-strong: #b7b18b;
     }
+}
+
+:root,
+html {
+    /* ---- Semantic tokens ---- */
+    --color-bg: light-dark(var(--seed-bg), oklch(0.262326 0.010858 107.125));
+    --color-surface: light-dark(var(--seed-surface), oklch(0.318058 0.015469 107.248));
+    --color-text: light-dark(var(--seed-text), oklch(0.993928 0.008183 91.480));
+    /* Keep body-sized muted copy readable in both themes. */
+    --color-text-muted: light-dark(var(--seed-text), oklch(0.806157 0.042778 67.157));
+    --color-content-muted: var(--color-text-muted);
+    --color-accent: light-dark(var(--accent-700), oklch(0.737063 0.129592 37.497));
+    --color-accent-hover: light-dark(var(--accent-800), oklch(0.82 0.09 37));
+    --color-link: light-dark(var(--accent-700), oklch(0.737063 0.129592 37.497));
+    --color-link-hover: light-dark(var(--accent-800), oklch(0.82 0.09 37));
+    --color-border: light-dark(var(--seed-border), oklch(0.450939 0.035952 113.894));
+    --color-border-strong: light-dark(var(--seed-border-strong), oklch(0.450939 0.035952 113.894));
+    --color-olive: light-dark(var(--seed-olive), oklch(0.755553 0.052291 100.041));
+    --color-tag-background: light-dark(var(--seed-bg), oklch(0.450939 0.035952 113.894));
+    --color-shadow: light-dark(rgb(51 58 28 / 0.14), rgb(0 0 0 / 0.3));
+    --color-focus-ring: light-dark(rgb(139 134 92 / 0.42), rgb(215 160 130 / 0.55));
+    --shadow-color: light-dark(rgb(51 58 28 / 0.12), rgb(0 0 0 / 0.3));
+    --shadow-sm-color: light-dark(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.3));
+    --shadow-md-color: light-dark(rgb(0 0 0 / 0.12), rgb(0 0 0 / 0.3));
+
+    /* ---- Existing page token names ---- */
+    --color-page-background: var(--color-bg);
+    --color-content-text: var(--color-text);
+    --color-link-accent: var(--color-link);
+    --color-primary: var(--color-olive);
+    --color-orange: var(--color-accent);
+    --color-muted: var(--color-text-muted);
+    --color-card-border: var(--color-border);
+    --color-on-primary: var(--color-text);
+    --color-card-text: var(--color-text);
+    --color-primary-light: var(--color-accent);
+
+    /* ---- Header chrome ---- */
+    --header-bg: var(--color-olive);
+    --header-text: light-dark(#ffffff, var(--seed-text));
+
+    /* ---- Theme toggle ---- */
+    --theme-toggle-bg: var(--color-olive);
+    --theme-toggle-border: var(--theme-toggle-bg);
+    --theme-toggle-bg-hover: var(--color-accent);
+    --theme-toggle-border-hover: var(--color-accent);
+
+    accent-color: var(--color-accent);
 }

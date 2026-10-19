@@ -1,7 +1,7 @@
 @layer base {
     body {
         min-height: 100vh;
-        padding: clamp(1.5rem, 3vw, 2.5rem);
+        padding: 0 clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.5rem);
         background-color: var(--color-page-background);
         color: var(--color-text);
         font-family: var(--font-body);
