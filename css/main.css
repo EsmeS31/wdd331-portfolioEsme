@@ -1,4 +1,4 @@
-@layer tokens, base, layout, components;
+@layer tokens, base, layout, components, utilities;
 
 @import url('tokens/colors.css') layer(tokens);
 @import url('tokens/variables.css') layer(tokens);
@@ -8,3 +8,4 @@
 @import url('layout/primary.css') layer(layout);
 @import url('components/project-card.css') layer(components);
 @import url('components/theme-toggle.css') layer(components);
+@import url('utilities/utilities.css') layer(utilities);

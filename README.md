@@ -13,11 +13,11 @@ The site supports light and dark themes, with a system option that follows
 the visitor's device preference. Use the theme control on any page to choose
 a preference; the selection is saved between visits.
 
-Shared color design tokens for the homepage are defined in
-[`css/tokens/colors.css`](css/tokens/colors.css). The assignment pages define
-their corresponding color tokens in their own `css/tokens/colors.css` files
-(the Custom Properties and Nesting page defines its tokens in
-`unit-1/custom-properties/styles.css`).
+Shared seed colors, the `oklch()` accent ramp, and light/dark semantic tokens
+for all pages are defined in [`css/tokens/colors.css`](css/tokens/colors.css).
+Spacing, typography, radius, transition, icon, and focus tokens live in
+[`css/tokens/variables.css`](css/tokens/variables.css). Assignment stylesheets
+reuse these shared tokens, with aliases where needed for existing styles.
 
 ## Pages
 - [Home](index.html)

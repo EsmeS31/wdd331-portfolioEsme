@@ -1,40 +1,45 @@
 :root {
-    --font-body: system-ui, sans-serif;
-    --font-heading: Georgia, serif;
-    --text-base: 1rem;
-    --text-large: 1.25rem;
-    --text-title: clamp(2.5rem, 8vw, 4.5rem);
-    --space-small: 0.5rem;
-    --space-medium: 1rem;
-    --space-large: 2rem;
-    --space-xlarge: 4rem;
-    --radius-medium: 0.75rem;
-    --radius-large: 1.5rem;
-    --shadow-card: 0 0.25rem 1rem rgb(51 58 28 / 12%);
-}
-
-
-:root {
-    /* Typography */
+    /* Assignment tokens */
     --font-family-sans: system-ui, sans-serif;
     --font-family-mono: monospace;
     --font-size-sm: 1.4rem;
     --font-size-md: 1.6rem;
     --font-size-lg: 1.8rem;
-
-
-    /* Radii */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 4rem;
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
-
-    /* Transitions */
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2rem;
+    --radius-pill: 999px;
     --transition-base: 0.2s ease;
-
-    /* Icons */
     --icon-size-sm: 24px;
     --icon-size-md: 32px;
-
-    /* Focus */
     --outline-width: 2px;
+
+    /* Legacy aliases */
+    --font-body: var(--font-family-sans);
+    --font-size-base: 1rem;
+    --font-heading: Georgia, serif;
+    --text-base: 1rem;
+    --text-large: 1.25rem;
+    --text-title: clamp(2.5rem, 8vw, 4.5rem);
+    --space-small: var(--spacing-sm);
+    --space-medium: var(--spacing-md);
+    --space-large: var(--spacing-lg);
+    --space-xlarge: var(--spacing-xl);
+    --space-xs: var(--spacing-xs);
+    --space-sm: var(--spacing-sm);
+    --space-md: var(--spacing-md);
+    --space-lg: var(--spacing-lg);
+    --space-xl: var(--spacing-xl);
+    --radius-medium: var(--radius-md);
+    --radius-large: var(--radius-lg);
+    --shadow-card: 0 0.25rem 1rem var(--shadow-color);
 }

@@ -1,8 +1,8 @@
 .page-shell {
     margin-bottom: var(--space-xlarge);
     padding: clamp(var(--space-large), 6vw, var(--space-xlarge));
-    border: 1px solid var(--color-card-border);
-    border-radius: var(--radius-large);
+    border: 0;
+    border-radius: var(--radius-3xl);
     background: var(--color-surface);
 }
 
@@ -32,7 +32,7 @@
 
 .hero-description {
     max-width: 38rem;
-    margin: var(--space-medium) auto 0;
+    margin: var(--space-large) auto 0;
     color: var(--color-content-text);
 }
 

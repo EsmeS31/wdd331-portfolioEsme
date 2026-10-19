@@ -1,76 +1,22 @@
 /* ========================================
    TOKENS
    ======================================== */
+@import url('../../css/tokens/colors.css');
+@import url('../../css/tokens/variables.css');
 @import url('../../css/components/theme-toggle.css');
 
 :root {
-    /* Colors */
-    --color-page-background: #D3BBA3;
-    --color-content-text: #333A1C;
-    --color-surface: #FFFFFF;
-    --color-link-accent: #D87355;
-    --color-tag-background: #D3BBA3;
-    --color-card-border: #8B865C;
-    --color-primary: #8B865C;
-    --color-orange: #D87355;
-    --color-olive: #8B865C;
-    --header-text: #FFFFFF;
-    --theme-toggle-bg: #8B865C;
-    --theme-toggle-bg-hover: #D87355;
-    --theme-toggle-border: #8B865C;
-    --theme-toggle-border-hover: #D87355;
+    --color-card-border: var(--color-border-strong);
 
     /* Spacing */
-    --space-compact: 0.5rem;
-    --space-standard: 1rem;
-    --space-generous: 2rem;
-
-    /* Typography */
-    --font-body: Helvetica, Arial, sans-serif;
-    --font-size-base: 1rem;
+    --space-compact: var(--spacing-sm);
+    --space-standard: var(--spacing-md);
+    --space-generous: var(--spacing-xl);
 
     /* Border radius and effects */
-    --radius-card: 0.75rem;
-    --radius-panel: 2rem;
-    --shadow-card: 0 0.35rem 1rem rgb(51 58 28 / 0.12);
-}
-
-:root[data-theme-preference='dark'] {
-    color-scheme: dark;
-    --color-page-background: #25251f;
-    --color-content-text: #fffdf7;
-    --color-surface: #33332a;
-    --color-link-accent: #ef8b6d;
-    --color-tag-background: #555841;
-    --color-card-border: #555841;
-    --color-primary: #b7b18b;
-    --color-orange: #ef8b6d;
-    --color-olive: #b7b18b;
-    --header-text: #25251f;
-    --theme-toggle-bg: #b7b18b;
-    --theme-toggle-bg-hover: #ef8b6d;
-    --theme-toggle-border: #b7b18b;
-    --theme-toggle-border-hover: #ef8b6d;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root[data-theme-preference='system'] {
-        color-scheme: dark;
-        --color-page-background: #25251f;
-        --color-content-text: #fffdf7;
-        --color-surface: #33332a;
-        --color-link-accent: #ef8b6d;
-        --color-tag-background: #555841;
-        --color-card-border: #555841;
-        --color-primary: #b7b18b;
-        --color-orange: #ef8b6d;
-        --color-olive: #b7b18b;
-        --header-text: #25251f;
-        --theme-toggle-bg: #b7b18b;
-        --theme-toggle-bg-hover: #ef8b6d;
-        --theme-toggle-border: #b7b18b;
-        --theme-toggle-border-hover: #ef8b6d;
-    }
+    --radius-card: var(--radius-xl);
+    --radius-panel: var(--radius-3xl);
+    --shadow-card: 0 0.35rem 1rem var(--shadow-color);
 }
 
 /* ========================================
@@ -210,7 +156,7 @@ main {
     background-color: var(--color-surface);
     border: 1px solid var(--color-card-border);
     border-radius: var(--radius-card);
-    box-shadow: var(--shadow-card, 0 0.35rem 1rem rgb(0 0 0 / 0.08));
+    box-shadow: var(--shadow-card);
 
     .card-tag {
         align-self: flex-end;

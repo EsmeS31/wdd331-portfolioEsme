@@ -1,13 +1,12 @@
+@import url('../../../../css/tokens/variables.css');
+
 /* Non-color tokens: spacing, typography, borders, shadows.
    These values should be referenced by every other layer. */
 :root {
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
+    --space-sm: var(--spacing-sm);
+    --space-md: var(--spacing-md);
 
-    --font-body: "Helvetica Neue", Arial, sans-serif;
+    --font-body: var(--font-family-sans);
 
-    --radius-sm: 0.75rem;
-    --radius-lg: 2rem;
     --radius-pill: 999px;
 }
