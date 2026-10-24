@@ -24,3 +24,4 @@ reuse these shared tokens, with aliases where needed for existing styles.
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
 - [Temple Factoids](unit-2/postcss-demo/index.html)
+- [Visual Effects](unit-3/visual-effects/index.html)
