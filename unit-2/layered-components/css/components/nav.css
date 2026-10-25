@@ -1,42 +1,37 @@
-/* Navigation component: .site-nav and its links
-   Style the active link using aria-current. */
-
-/* TODO: Style the navigation */
 @layer components {
     .site-header {
-        padding-block-start: clamp(1.5rem, 3vw, 2.5rem);
+        width: min(100% - 2rem, 68rem);
+        margin-inline: auto;
+        padding-block: var(--space-large);
     }
 
     .site-nav {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: var(--space-md) var(--space-lg);
-        max-width: 68rem;
-        margin: 0 auto var(--space-md);
-        padding: 1.25rem var(--space-lg);
+        justify-content: center;
+        gap: var(--space-small) var(--space-large);
+        padding: var(--space-medium) var(--space-large);
         border: 1px solid var(--color-border);
-        background-color: var(--color-surface);
-        border-radius: 3rem;
-        box-shadow: 0 0.25rem 0.9rem var(--color-shadow);
+        border-radius: var(--radius-pill);
+        background: var(--color-surface);
         text-align: center;
 
         a {
-            color: var(--color-muted);
+            color: var(--color-content-text);
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: color var(--transition-base);
 
             &:hover,
             &:focus-visible {
-                color: var(--color-accent);
+                color: var(--color-orange);
             }
-        }
 
-        a[aria-current="page"] {
-            color: var(--color-accent);
-            font-weight: 700;
+            &[aria-current="page"] {
+                color: var(--color-orange);
+            }
         }
     }
 }

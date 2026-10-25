@@ -66,33 +66,33 @@ main {
    ======================================== */
 .site-nav {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-standard) var(--space-generous);
+    justify-content: center;
+    gap: var(--space-compact) var(--space-large);
     max-width: 68rem;
-    margin: 0 auto var(--space-standard);
-    padding: 1.25rem var(--space-generous);
+    margin: 0 auto;
+    padding: var(--space-standard) var(--space-large);
     border: 1px solid var(--color-card-border);
     background-color: var(--color-surface);
-    border-radius: 3rem;
+    border-radius: var(--radius-pill);
     text-align: center;
 
     a {
         color: var(--color-content-text);
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 600;
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: color var(--transition-base);
 
         &:hover,
         &:focus-visible {
             color: var(--color-orange);
         }
-    }
 
-    a[aria-current="page"] {
-        color: var(--color-orange);
+        &[aria-current="page"] {
+            color: var(--color-orange);
+        }
     }
 }
 

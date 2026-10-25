@@ -31,14 +31,15 @@
             </label>
         </div>
     </details>
-    <nav class="site-nav">
-    <a href="../../index.html">&larr; Home</a>
-    <ul>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#" aria-current="page">Effects</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</nav>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../../index.html">Home</a>
+            <a href="../../unit-1/custom-properties/index.html">Custom Properties and Nesting</a>
+            <a href="../../unit-2/layered-components/index.html">Layered Components</a>
+            <a href="../../unit-2/postcss-demo/index.html">Choose Topic: Temple Factoids</a>
+            <a href="index.html" aria-current="page">Visual Effects</a>
+        </nav>
+    </header>
 
 <!-- HERO: Use a gradient overlay and text-shadow for depth -->
 <header class="hero">
@@ -140,24 +141,29 @@
     </section>
 
     <section class="blend-section" aria-labelledby="blend-title">
-        <h2 id="blend-title">Blend Modes</h2>
-        <p>
-            Each color wash blends with the photo beneath it using
-            <code>background-blend-mode</code>. Compare how multiply,
-            screen, and overlay combine the same two layers.
-        </p>
+        <div class="blend-intro">
+            <p class="blend-eyebrow">One photograph, three treatments</p>
+            <h2 id="blend-title">A study in blend modes</h2>
+            <p>
+                The same Salt Lake Temple photograph gets a different mood
+                with each color layer. The only thing changing is the blend mode.
+            </p>
+        </div>
         <div class="blend-examples">
             <article class="blend-tile blend-multiply">
-                <h3>Multiply</h3>
-                <p>Darkens the image with a warm color wash.</p>
+                <span class="blend-label">01 <span aria-hidden="true">/</span> MULTIPLY</span>
+                <h3>Warmth &amp; depth</h3>
+                <p>Rich shadows bring out the stonework.</p>
             </article>
             <article class="blend-tile blend-screen">
-                <h3>Screen</h3>
-                <p>Lightens the image with a cool color wash.</p>
+                <span class="blend-label">02 <span aria-hidden="true">/</span> SCREEN</span>
+                <h3>Air &amp; light</h3>
+                <p>A cool wash lifts the highlights.</p>
             </article>
             <article class="blend-tile blend-overlay">
-                <h3>Overlay</h3>
-                <p>Adds contrast while preserving highlights and shadows.</p>
+                <span class="blend-label">03 <span aria-hidden="true">/</span> OVERLAY</span>
+                <h3>Balanced contrast</h3>
+                <p>Color and contrast meet in the midtones.</p>
             </article>
         </div>
     </section>
