@@ -1,28 +1,33 @@
+.site-header {
+    width: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+    padding-block: var(--space-large);
+}
+
 .site-nav {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: var(--space-md) var(--space-lg);
     max-width: 68rem;
-    margin: 0 auto var(--space-md);
-    padding: 1.25rem var(--space-lg);
-    background: var(--color-surface);
+    gap: var(--space-small) var(--space-large);
+    padding: var(--space-medium) var(--space-large);
     border: 1px solid var(--color-border);
-    border-radius: 3rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
     text-align: center;
-    margin-bottom: var(--space-lg);
 
     a {
-        color: var(--color-text);
+        color: var(--color-content-text);
+        font-size: 0.95rem;
         font-weight: 600;
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: color var(--transition-base);
 
         &:hover,
         &:focus-visible,
         &[aria-current="page"] {
-            color: var(--color-accent);
+            color: var(--color-orange);
         }
     }
 }

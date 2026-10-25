@@ -28,6 +28,7 @@
 }
 
 .site-nav a:hover,
-.site-nav .home-link {
+.site-nav .home-link,
+.site-nav a[aria-current='page'] {
     color: var(--color-orange);
 }
