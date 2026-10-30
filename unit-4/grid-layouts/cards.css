@@ -1,0 +1,45 @@
+.articles-page .card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 240px), 1fr)
+    );
+    gap: var(--space-large);
+    width: 100%;
+    min-width: 0;
+}
+
+.articles-page .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-large);
+    background: var(--color-surface);
+    color: var(--color-content-text);
+    box-shadow: var(--shadow-card);
+}
+
+.articles-page .card > div:first-child {
+    flex: 0 0 12rem;
+    height: 12rem;
+    background: linear-gradient(
+        135deg,
+        var(--color-tag-background),
+        var(--color-olive)
+    );
+}
+
+.articles-page .card > div:nth-child(2) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    padding: var(--space-large);
+}
+
+.articles-page .card > div:nth-child(2) > a:last-child {
+    margin-block-start: auto;
+    padding-block-start: var(--space-medium);
+}
