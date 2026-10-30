@@ -25,3 +25,5 @@ reuse these shared tokens, with aliases where needed for existing styles.
 - [Layered Components](unit-2/layered-components/index.html)
 - [Temple Factoids](unit-2/postcss-demo/index.html)
 - [Visual Effects](unit-3/visual-effects/index.html)
+- [Editorial Layout](unit-4/grid-layouts/editorial.html)
+- [Card Grid](unit-4/grid-layouts/cards.html)
