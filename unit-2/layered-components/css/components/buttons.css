@@ -47,6 +47,6 @@
 
     .btn.secondary {
         background-color: var(--color-tag-background);
-        color: var(--color-text);
+        color: var(--color-text-on-accent);
     }
 }

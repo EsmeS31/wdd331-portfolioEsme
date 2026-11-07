@@ -1,9 +1,10 @@
 .page-shell {
     margin-bottom: var(--space-xlarge);
     padding: clamp(var(--space-large), 6vw, var(--space-xlarge));
-    border: 0;
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-3xl);
     background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .hero {

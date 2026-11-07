@@ -58,6 +58,7 @@
     min-height: 10rem;
     place-items: center;
     background: linear-gradient(135deg, var(--color-tag-background), var(--color-olive));
+    color: var(--color-text-on-accent);
     font-family: var(--font-heading);
     font-size: 4rem;
 }
