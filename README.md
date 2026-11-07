@@ -27,3 +27,5 @@ reuse these shared tokens, with aliases where needed for existing styles.
 - [Visual Effects](unit-3/visual-effects/index.html)
 - [Editorial Layout](unit-4/grid-layouts/editorial.html)
 - [Card Grid](unit-4/grid-layouts/cards.html)
+- [Container Queries](unit-4/advanced/container-demo.html)
+- [Sticky Sidebar](unit-4/advanced/sticky-demo.html)

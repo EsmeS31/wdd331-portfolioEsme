@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Queries</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="container-demo.css">
+</head>
+<body class="container-demo-page">
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="home-link" href="../../index.html">Portfolio</a>
+            <a href="../grid-layouts/cards.html">Articles</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <header class="page-intro">
+            <p class="eyebrow">Unit 4 · Advanced CSS</p>
+            <h1>One component, two contexts</h1>
+            <p>The same feature card responds to the width of its own container, so it can fit a sidebar or a main content area.</p>
+        </header>
+
+        <div class="placement-layout">
+            <aside class="placement placement--narrow" aria-labelledby="sidebar-title">
+                <h2 id="sidebar-title">Sidebar placement</h2>
+                <div class="component-container component-container--narrow">
+                    <article class="feature-card">
+                        <div class="feature-card__art" aria-hidden="true">01</div>
+                        <div class="feature-card__content">
+                            <p class="feature-card__eyebrow">Layout note</p>
+                            <h3>Start with the context</h3>
+                            <p>A compact card keeps its artwork above the text when there is not much room.</p>
+                            <a href="#wide-example">See the wide version <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <section class="placement placement--wide" id="wide-example" aria-labelledby="main-title">
+                <h2 id="main-title">Main content placement</h2>
+                <div class="component-container component-container--wide">
+                    <article class="feature-card">
+                        <div class="feature-card__art" aria-hidden="true">01</div>
+                        <div class="feature-card__content">
+                            <p class="feature-card__eyebrow">Layout note</p>
+                            <h3>Start with the context</h3>
+                            <p>Give the card more room and it moves the artwork beside the copy, making a useful feature row without checking the viewport.</p>
+                            <a href="#sidebar-title">Return to the compact version <span aria-hidden="true">↑</span></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
