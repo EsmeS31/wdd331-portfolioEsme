@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Sidebar</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="sticky-demo.css">
+</head>
+<body class="sticky-demo-page">
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="home-link" href="../../index.html">Portfolio</a>
+            <a href="../grid-layouts/cards.html">Articles</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <header class="page-intro">
+            <p class="eyebrow">Unit 4 · Advanced CSS</p>
+            <h1>A sidebar that stays with you</h1>
+            <p>Scroll through the guide and the section list will stay in view while its article is in progress.</p>
+        </header>
+
+        <div class="sticky-frame">
+            <div class="sticky-layout">
+                <aside class="sticky-sidebar" aria-label="On this page">
+                    <nav>
+                        <p>On this page</p>
+                        <a href="#start">Start here</a>
+                        <a href="#observe">Observe the layout</a>
+                        <a href="#choose">Choose the right tool</a>
+                        <a href="#finish">Finish the details</a>
+                    </nav>
+                </aside>
+
+                <article class="guide-content">
+                    <section id="start">
+                        <p class="eyebrow">01 · Start here</p>
+                        <h2>Make room for the reader</h2>
+                        <p>A sticky table of contents helps readers keep their place in a long guide. It follows the normal document flow until it reaches the top offset, then remains visible as the article continues.</p>
+                        <p>The sidebar belongs to the same grid row as this article. Its sticky position is bounded by that row, so it releases naturally when the article ends instead of following the reader forever.</p>
+                    </section>
+                    <section id="observe">
+                        <p class="eyebrow">02 · Observe the layout</p>
+                        <h2>Watch the content change</h2>
+                        <p>Real pages rarely have uniform sections. A contents list can provide a stable point of reference while examples, notes, and explanations change length underneath it.</p>
+                        <p>On a narrow screen the columns collapse into one. The navigation then returns to the regular flow above the article, where it remains easy to reach without taking away valuable reading width.</p>
+                        <p>Sticky positioning needs a non-auto inset on the axis where it should stick. Here, <code>top</code> gives the sidebar a clear stopping point below the browser's top edge.</p>
+                    </section>
+                    <section id="choose">
+                        <p class="eyebrow">03 · Choose the right tool</p>
+                        <h2>Let the container do its job</h2>
+                        <p>Sticky elements can stop working when an ancestor creates another scrolling box. This example keeps its rounded visual frame without making that frame the sticky element's scroll container.</p>
+                        <p>Keeping the decorative frame separate from the scrolling behavior makes the relationship easier to reason about. The article remains the boundary for the sidebar, and the viewport remains the scroll container.</p>
+                    </section>
+                    <section id="finish">
+                        <p class="eyebrow">04 · Finish the details</p>
+                        <h2>End with a clear next step</h2>
+                        <p>Use sticky behavior where it supports orientation: a compact table of contents, a section label, or controls that readers need while working through a longer task.</p>
+                        <p>Check the result at short viewport heights and narrow widths too. A sidebar that feels helpful on a large display can take over the page when the available space gets smaller.</p>
+                        <a href="../../index.html">Back to the portfolio</a>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

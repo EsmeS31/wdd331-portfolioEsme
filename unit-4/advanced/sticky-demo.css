@@ -1,0 +1,85 @@
+.sticky-demo-page .page-intro {
+    max-width: 46rem;
+    margin-block: var(--space-xlarge);
+}
+
+.sticky-demo-page .page-intro h1 {
+    margin-block: var(--space-small);
+}
+
+.sticky-demo-page .page-intro > p:last-child {
+    color: var(--color-muted);
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--color-orange);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sticky-frame {
+    /* Hidden made this frame the sticky element's scroll container. Clip keeps the rounded edge without trapping sticky. */
+    overflow: clip;
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-large);
+    background: var(--color-surface);
+}
+
+.sticky-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--space-large);
+    padding: var(--space-large);
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+}
+
+.sticky-sidebar nav {
+    display: grid;
+    gap: var(--space-small);
+    padding: var(--space-medium);
+    border-inline-start: 3px solid var(--color-orange);
+    background: var(--color-page-background);
+}
+
+.sticky-sidebar p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.sticky-sidebar a {
+    text-decoration: none;
+}
+
+.guide-content section {
+    min-height: 22rem;
+    padding-block: var(--space-medium) var(--space-large);
+}
+
+.guide-content section + section {
+    border-block-start: 1px solid var(--color-card-border);
+}
+
+.guide-content h2 {
+    margin-block: var(--space-small) var(--space-medium);
+}
+
+@media (max-width: 48rem) {
+    .sticky-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sticky-sidebar {
+        position: static;
+    }
+
+    .guide-content section {
+        min-height: 0;
+    }
+}
