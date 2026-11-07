@@ -283,17 +283,17 @@ header.hero p {
 
 .blend-multiply {
     --blend-mode: multiply;
-    --blend-tint: light-dark(rgb(201 91 44 / 0.78), rgb(232 118 68 / 0.78));
+    --blend-tint: rgb(255 77 120 / 0.78);
 }
 
 .blend-screen {
     --blend-mode: screen;
-    --blend-tint: light-dark(rgb(73 139 190 / 0.72), rgb(106 178 226 / 0.72));
+    --blend-tint: rgb(1 255 195 / 0.72);
 }
 
 .blend-overlay {
     --blend-mode: overlay;
-    --blend-tint: light-dark(rgb(143 137 80 / 0.7), rgb(179 171 99 / 0.7));
+    --blend-tint: rgb(0 181 181 / 0.7);
 }
 
 @media (prefers-reduced-motion: reduce) {

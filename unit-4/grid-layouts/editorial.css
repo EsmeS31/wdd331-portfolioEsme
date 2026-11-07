@@ -1,38 +1,12 @@
-.editorial-page > header,
+.editorial-page > header.site-header,
 .editorial-page .layout,
 .editorial-page > footer {
     width: min(100% - 2rem, 68rem);
     margin-inline: auto;
 }
 
-.editorial-page > header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-medium);
+.editorial-page > header.site-header {
     padding-block: var(--space-large);
-}
-
-.editorial-page > header > a {
-    color: var(--color-content-text);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.editorial-page > header nav {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--space-large);
-}
-
-.editorial-page > header nav a {
-    color: var(--color-content-text);
-    text-decoration: none;
-}
-
-.editorial-page > header nav a:hover {
-    color: var(--color-orange);
 }
 
 .editorial-page .layout {

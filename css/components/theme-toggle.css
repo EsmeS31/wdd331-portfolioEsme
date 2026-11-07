@@ -66,7 +66,7 @@ details.theme-menu {
         color: var(--header-text);
         background-color: var(--theme-toggle-bg);
         border: 1px solid var(--theme-toggle-border);
-        border-radius: var(--radius-sm);
+        border-radius: 50%;
         cursor: pointer;
         transition:
             background-color var(--transition-base),

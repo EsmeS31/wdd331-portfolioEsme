@@ -1,0 +1,84 @@
+:root {
+    color-scheme: light dark;
+
+    /* Colors from the teal, navy, mint, and coral reference. */
+    --seed-bg: #007987;
+    --seed-surface: #021f28;
+    --seed-text: #f0ffff;
+    --seed-text-muted: #b5d9dd;
+    --seed-olive: #00b5b5;
+    --seed-accent: #ff4d78;
+    --seed-accent-hover: #ff7896;
+    --seed-link: #01ffc3;
+    --seed-link-hover: #8bffe1;
+    --seed-border: #00b5b5;
+    --seed-border-strong: #01ffc3;
+
+    --accent-200: #ffc2d0;
+    --accent-300: #ff9ab0;
+    --accent-400: #ff7896;
+    --accent-500: var(--seed-accent);
+    --accent-600: #e53d67;
+    --accent-700: #c92d55;
+    --accent-800: #a51f43;
+}
+
+:root:has(input[name='theme-preference'][value='light']:checked),
+:root[data-theme-preference='light'] {
+    color-scheme: light;
+}
+
+:root:has(input[name='theme-preference'][value='dark']:checked),
+:root[data-theme-preference='dark'] {
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:has(input[name='theme-preference'][value='system']:checked),
+    :root[data-theme-preference='system'] {
+        color-scheme: dark;
+    }
+}
+
+:root,
+html {
+    --color-bg: light-dark(var(--seed-bg), #021f28);
+    --color-surface: light-dark(var(--seed-surface), #07343d);
+    --color-text: var(--seed-text);
+    --color-text-muted: var(--seed-text-muted);
+    --color-content-muted: var(--color-text-muted);
+    --color-accent: var(--seed-accent);
+    --color-accent-hover: var(--seed-accent-hover);
+    --color-link: var(--seed-link);
+    --color-link-hover: var(--seed-link-hover);
+    --color-border: var(--seed-border);
+    --color-border-strong: var(--seed-border-strong);
+    --color-olive: var(--seed-olive);
+    --color-tag-background: var(--seed-olive);
+    --color-shadow: rgb(2 31 40 / 35%);
+    --color-focus-ring: rgb(1 255 195 / 55%);
+    --shadow-color: rgb(2 31 40 / 35%);
+    --shadow-sm-color: rgb(2 31 40 / 25%);
+    --shadow-md-color: rgb(2 31 40 / 40%);
+
+    --color-page-background: var(--color-bg);
+    --color-content-text: var(--color-text);
+    --color-link-accent: var(--color-link);
+    --color-primary: var(--color-olive);
+    --color-orange: var(--color-accent);
+    --color-muted: var(--color-text-muted);
+    --color-card-border: var(--color-border);
+    --color-on-primary: var(--color-text);
+    --color-card-text: var(--color-text);
+    --color-primary-light: var(--color-accent);
+    --color-text-on-accent: #021f28;
+
+    --header-bg: var(--color-surface);
+    --header-text: var(--color-text-on-accent);
+    --theme-toggle-bg: var(--color-olive);
+    --theme-toggle-border: var(--color-olive);
+    --theme-toggle-bg-hover: var(--color-accent);
+    --theme-toggle-border-hover: var(--color-accent);
+
+    accent-color: var(--color-accent);
+}
