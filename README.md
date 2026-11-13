@@ -19,6 +19,17 @@ Spacing, typography, radius, transition, icon, and focus tokens live in
 [`css/tokens/variables.css`](css/tokens/variables.css). Assignment stylesheets
 reuse these shared tokens, with aliases where needed for existing styles.
 
+## Typography System
+The shared stylesheet uses a minor-third modular type scale (ratio 1.2) based
+on a 1rem / 16px body size. Eight scale steps run from `--font-size-xs` through
+`--font-size-4xl`; the display steps use `clamp()` so they grow smoothly from
+360px to 1440px viewport widths. Semantic role tokens such as
+`--font-size-body`, `--font-size-heading-lg`, and `--font-size-display` map
+those steps to their purpose. Body and heading line heights are separately
+tuned in the same token file. DM Sans is loaded for headings with
+`display=swap` and a system sans-serif fallback; body copy stays in the
+system sans-serif stack for comfortable reading.
+
 ## Pages
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)

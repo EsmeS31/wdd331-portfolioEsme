@@ -1,5 +1,3 @@
-@layer tokens, base, layout, components, utilities;
-
 @import url('tokens/colors.css') layer(tokens);
 @import url('tokens/variables.css') layer(tokens);
 @import url('base/reset.css') layer(base);
@@ -10,3 +8,5 @@
 @import url('components/theme-toggle.css') layer(components);
 @import url('components/effects.css') layer(components);
 @import url('utilities/utilities.css') layer(utilities);
+
+@layer tokens, base, layout, components, utilities;

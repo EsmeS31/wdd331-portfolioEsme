@@ -1,10 +1,32 @@
 :root {
     /* Assignment tokens */
     --font-family-sans: system-ui, sans-serif;
+    --font-family-heading: "DM Sans", system-ui, sans-serif;
+    --font-family-body: system-ui, sans-serif;
     --font-family-mono: monospace;
-    --font-size-sm: 1.4rem;
-    --font-size-md: 1.6rem;
-    --font-size-lg: 1.8rem;
+
+    /* Minor-third scale (1.2), based on a 1rem / 16px body size. */
+    --font-size-xs: 0.694rem;
+    --font-size-sm: 0.833rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.44rem;
+    --font-size-2xl: clamp(1.728rem, calc(1.554rem + 0.773vw), 2.25rem);
+    /* Fluid steps use exact endpoints at 360px and 1440px viewports. */
+    --font-size-3xl: clamp(2.074rem, calc(1.682rem + 1.742vw), 3.25rem);
+    --font-size-4xl: clamp(2.488rem, calc(1.817rem + 2.981vw), 4.5rem);
+
+    /* Semantic roles keep components independent of scale positions. */
+    --font-size-body: var(--font-size-md);
+    --font-size-caption: var(--font-size-xs);
+    --font-size-lead: var(--font-size-lg);
+    --font-size-heading-sm: var(--font-size-xl);
+    --font-size-heading-lg: var(--font-size-2xl);
+    --font-size-display: var(--font-size-4xl);
+    --line-height-body: 1.7;
+    --line-height-caption: 1.4;
+    --line-height-heading: 1.2;
+    --line-height-display: 1.05;
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
@@ -24,12 +46,12 @@
     --outline-width: 2px;
 
     /* Legacy aliases */
-    --font-body: var(--font-family-sans);
-    --font-size-base: 1rem;
-    --font-heading: var(--font-family-sans);
-    --text-base: 1rem;
-    --text-large: 1.25rem;
-    --text-title: clamp(2.5rem, 8vw, 4.5rem);
+    --font-body: var(--font-family-body);
+    --font-size-base: var(--font-size-body);
+    --font-heading: var(--font-family-heading);
+    --text-base: var(--font-size-body);
+    --text-large: var(--font-size-heading-sm);
+    --text-title: var(--font-size-display);
     --space-small: var(--spacing-sm);
     --space-medium: var(--spacing-md);
     --space-large: var(--spacing-lg);

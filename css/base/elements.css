@@ -3,9 +3,9 @@ body {
     min-height: 100vh;
     background: var(--color-page-background);
     color: var(--color-content-text);
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: 1.7;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
 }
 
 p + p {
@@ -29,6 +29,19 @@ a:focus-visible {
 h1,
 h2,
 h3 {
-    font-family: var(--font-heading);
-    line-height: 1.2;
+    font-family: var(--font-family-heading);
+    line-height: var(--line-height-heading);
+}
+
+h1 {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+}
+
+h2 {
+    font-size: var(--font-size-heading-lg);
+}
+
+h3 {
+    font-size: var(--font-size-heading-sm);
 }
