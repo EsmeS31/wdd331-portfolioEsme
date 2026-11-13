@@ -15,7 +15,7 @@
 
 .project-card h3 {
     margin-bottom: var(--space-small);
-    font-size: var(--text-large);
+    font-size: var(--font-size-heading-sm);
 }
 
 .project-card h3 a {

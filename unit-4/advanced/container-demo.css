@@ -15,7 +15,7 @@
 .feature-card__eyebrow {
     margin: 0;
     color: var(--color-orange);
-    font-size: 0.8rem;
+    font-size: var(--font-size-caption);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -59,8 +59,8 @@
     place-items: center;
     background: linear-gradient(135deg, var(--color-tag-background), var(--color-olive));
     color: var(--color-text-on-accent);
-    font-family: var(--font-heading);
-    font-size: 4rem;
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-display);
 }
 
 .feature-card__content {

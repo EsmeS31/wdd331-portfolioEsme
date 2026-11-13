@@ -23,7 +23,7 @@
 
 .site-nav a {
     color: var(--color-content-text);
-    font-size: 0.95rem;
+    font-size: var(--font-size-body);
     font-weight: 600;
     white-space: nowrap;
     text-decoration: none;
