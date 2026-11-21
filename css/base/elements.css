@@ -45,3 +45,14 @@ h2 {
 h3 {
     font-size: var(--font-size-heading-sm);
 }
+
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+textarea {
+    color: var(--color-content-text);
+}
