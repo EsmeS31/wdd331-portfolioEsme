@@ -8,8 +8,6 @@
 @import url('components/theme-toggle.css') layer(components);
 @import url('components/effects.css') layer(components);
 @import url('utilities/utilities.css') layer(utilities);
-@import url('components/resume-contact.css') layer(components);
-
 @layer tokens, base, layout, components, utilities;
 
 @media print {
