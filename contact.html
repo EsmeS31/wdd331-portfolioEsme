@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Esme Sanchez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/theme-preference.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <details class="theme-menu">
+        <summary class="theme-control"><span class="visually-hidden">Color scheme</span></summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+            <label class="theme-control theme-pick" data-theme-pick="light"><input name="theme-preference" type="radio" value="light"><span aria-hidden="true">☀️</span><span class="visually-hidden">Light</span></label>
+            <label class="theme-control theme-pick" data-theme-pick="system"><input name="theme-preference" type="radio" value="system" checked><span aria-hidden="true">⚙️</span><span class="visually-hidden">System default</span></label>
+            <label class="theme-control theme-pick" data-theme-pick="dark"><input name="theme-preference" type="radio" value="dark"><span aria-hidden="true">🌒</span><span class="visually-hidden">Dark</span></label>
+        </div>
+    </details>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+            <a href="unit-1/custom-properties/index.html">Custom Properties</a>
+            <a href="unit-2/layered-components/index.html">Layered Components</a>
+            <a href="unit-2/postcss-demo/index.html">Temple Factoids</a>
+            <a href="unit-3/visual-effects/index.html">Visual Effects</a>
+            <a href="unit-4/grid-layouts/editorial.html">Editorial Layout</a>
+            <a href="unit-4/grid-layouts/cards.html">Card Grid</a>
+            <a href="unit-4/advanced/container-demo.html">Container Queries</a>
+            <a href="unit-4/advanced/sticky-demo.html">Sticky Sidebar</a>
+        </nav>
+    </header>
+    <main class="contact-page">
+        <h1>Contact Me</h1>
+        <p class="contact-intro">Have a project idea or a question? Send me a note using the form below.</p>
+        <form class="contact-form" action="#" method="get">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <label class="checkbox-field" for="updates">
+                <input id="updates" name="updates" type="checkbox">
+                <span>Send me occasional portfolio updates</span>
+            </label>
+            <button type="submit">Send message</button>
+        </form>
+    </main>
+</body>
+</html>

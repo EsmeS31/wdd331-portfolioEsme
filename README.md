@@ -8,6 +8,14 @@ Each week I add new pages and styles as I work through the course
 assignments. The site deploys automatically to GitHub Pages on
 every push to main.
 
+## Resume and Contact Pages
+The [resume](resume.html) page uses semantic sections and experience entries.
+It has print styles in `css/main.css`, so the navigation and theme control are
+hidden on paper and web links show their addresses. Use the browser's print
+preview to save the resume as a PDF. The [contact](contact.html) page has
+labelled name, email, and message fields plus an updates checkbox. The form is
+a front-end example and does not send messages to a server.
+
 ## Theme and Colors
 The site supports light and dark themes, with a system option that follows
 the visitor's device preference. Use the theme control on any page to choose
@@ -40,3 +48,11 @@ system sans-serif stack for comfortable reading.
 - [Card Grid](unit-4/grid-layouts/cards.html)
 - [Container Queries](unit-4/advanced/container-demo.html)
 - [Sticky Sidebar](unit-4/advanced/sticky-demo.html)
+- [Resume](resume.html)
+- [Contact](contact.html)
+
+## Token Audit
+I removed custom properties from the shared color and variable files that had
+no CSS consumers. I kept the short spacing aliases that are used by the
+earlier course pages and added the shared `accent-color` setting to the form
+controls through the color tokens.

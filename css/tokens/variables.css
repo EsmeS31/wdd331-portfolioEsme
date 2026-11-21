@@ -1,19 +1,15 @@
 :root {
     /* Assignment tokens */
-    --font-family-sans: system-ui, sans-serif;
     --font-family-heading: "DM Sans", system-ui, sans-serif;
     --font-family-body: system-ui, sans-serif;
-    --font-family-mono: monospace;
 
     /* Minor-third scale (1.2), based on a 1rem / 16px body size. */
     --font-size-xs: 0.694rem;
-    --font-size-sm: 0.833rem;
     --font-size-md: 1rem;
     --font-size-lg: 1.2rem;
     --font-size-xl: 1.44rem;
     --font-size-2xl: clamp(1.728rem, calc(1.554rem + 0.773vw), 2.25rem);
     /* Fluid steps use exact endpoints at 360px and 1440px viewports. */
-    --font-size-3xl: clamp(2.074rem, calc(1.682rem + 1.742vw), 3.25rem);
     --font-size-4xl: clamp(2.488rem, calc(1.817rem + 2.981vw), 4.5rem);
 
     /* Semantic roles keep components independent of scale positions. */
@@ -24,7 +20,6 @@
     --font-size-heading-lg: var(--font-size-2xl);
     --font-size-display: var(--font-size-4xl);
     --line-height-body: 1.7;
-    --line-height-caption: 1.4;
     --line-height-heading: 1.2;
     --line-height-display: 1.05;
     --spacing-xs: 4px;
@@ -32,10 +27,6 @@
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
-    --spacing-2xl: 4rem;
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
     --radius-xl: 0.75rem;
     --radius-2xl: 1.5rem;
     --radius-3xl: 2rem;
@@ -45,24 +36,11 @@
     --icon-size-md: 32px;
     --outline-width: 2px;
 
-    /* Legacy aliases */
-    --font-body: var(--font-family-body);
-    --font-size-base: var(--font-size-body);
-    --font-heading: var(--font-family-heading);
-    --text-base: var(--font-size-body);
-    --text-large: var(--font-size-heading-sm);
-    --text-title: var(--font-size-display);
+    /* Short aliases used by the earlier course pages. */
     --space-small: var(--spacing-sm);
     --space-medium: var(--spacing-md);
     --space-large: var(--spacing-lg);
     --space-xlarge: var(--spacing-xl);
-    --space-xs: var(--spacing-xs);
-    --space-sm: var(--spacing-sm);
-    --space-md: var(--spacing-md);
-    --space-lg: var(--spacing-lg);
-    --space-xl: var(--spacing-xl);
-    --radius-medium: var(--radius-md);
-    --radius-large: var(--radius-lg);
     --shadow-card: 0 0.25rem 1rem var(--shadow-color);
 
     --shadow-sm:
@@ -72,8 +50,4 @@
         0 2px 4px oklch(0.2 0 0 / 0.1),
         0 6px 12px oklch(0.2 0 0 / 0.07),
         0 16px 32px oklch(0.2 0 0 / 0.05);
-    --shadow-lg:
-        0 4px 8px oklch(0.2 0 0 / 0.1),
-        0 12px 24px oklch(0.2 0 0 / 0.08),
-        0 24px 48px oklch(0.2 0 0 / 0.06);
 }

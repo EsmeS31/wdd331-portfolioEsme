@@ -8,5 +8,83 @@
 @import url('components/theme-toggle.css') layer(components);
 @import url('components/effects.css') layer(components);
 @import url('utilities/utilities.css') layer(utilities);
+@import url('components/resume-contact.css') layer(components);
 
 @layer tokens, base, layout, components, utilities;
+
+@media print {
+    .theme-menu,
+    .site-header,
+    .screen-only,
+    .contact-page {
+        display: none !important;
+    }
+
+    body {
+        min-width: 0;
+        background: white;
+        color: #222;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 10pt;
+        line-height: 1.35;
+    }
+
+    .resume-page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: white;
+        box-shadow: none;
+    }
+
+    .resume-header,
+    .resume-entry {
+        break-inside: avoid;
+    }
+
+    /* A grid row often gets pushed to the next page as one large block. */
+    .resume-columns {
+        display: block;
+    }
+
+    .resume-sidebar {
+        padding: 0;
+        background: white;
+    }
+
+    .resume-section + .resume-section {
+        margin-top: 12pt;
+    }
+
+    .resume-page h1 {
+        font-size: 24pt;
+    }
+
+    .resume-page h2 {
+        font-size: 13pt;
+    }
+
+    .resume-page h3 {
+        font-size: 11pt;
+    }
+
+    .resume-page p,
+    .resume-page li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    .resume-page a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .resume-page a[href]::after {
+        content: ' (' attr(href) ')';
+        font-size: 8pt;
+        overflow-wrap: anywhere;
+    }
+}
