@@ -1,5 +1,9 @@
 @import url('../../../../css/tokens/colors.css');
 
 :root {
-    --color-text-muted: var(--color-content-muted);
+    /* Older component names mapped to the shared theme colors. */
+    --color-on-primary: var(--color-content-text);
+    --color-card-text: var(--color-content-text);
+    --color-primary: var(--color-content-text);
+    --color-primary-light: var(--color-accent);
 }

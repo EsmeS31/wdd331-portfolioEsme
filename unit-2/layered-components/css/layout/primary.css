@@ -17,11 +17,12 @@
 
     .page-header {
         max-width: 1100px;
+        width: 100%;
         margin: 0 auto;
         padding: clamp(2rem, 5vw, 3rem);
-        background-color: var(--color-primary);
-        color: var(--color-surface);
-        font-family: Helvetica, Arial, sans-serif;
+        background-color: var(--color-olive);
+        color: var(--color-text-on-accent);
+        font-family: var(--font-family-heading);
         text-align: center;
         border-radius: 2rem 2rem 0 0;
     }
@@ -30,12 +31,12 @@
         font-size: clamp(2rem, 6vw, 3.5rem);
         font-weight: 700;
         line-height: 1.15;
-        color: var(--color-surface);
+        color: var(--color-text-on-accent);
     }
 
     .page-header p {
         margin-top: 0.5rem;
-        color: var(--color-surface);
+        color: var(--color-text-on-accent);
     }
 
     .page-footer {
