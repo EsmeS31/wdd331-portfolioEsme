@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Dashboard</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="motion.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../../index.html">Home</a>
+            <a href="../../resume.html">Resume</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="../../unit-1/custom-properties/index.html">Custom Properties</a>
+            <a href="../../unit-2/layered-components/index.html">Layered Components</a>
+            <a href="../../unit-2/postcss-demo/index.html">Temple Factoids</a>
+            <a href="../../unit-3/visual-effects/index.html">Visual Effects</a>
+            <a href="../../unit-4/grid-layouts/editorial.html">Editorial Layout</a>
+            <a href="../../unit-4/grid-layouts/cards.html">Card Grid</a>
+            <a href="../../unit-4/advanced/container-demo.html">Container Queries</a>
+            <a href="../../unit-4/advanced/sticky-demo.html">Sticky Sidebar</a>
+            <a href="index.html" aria-current="page">Meaningful Motion</a>
+            <a href="../../unit-7/reimagined-home/index.html">BYU-Idaho Home Reimagined</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="dashboard-header">
+            <div>
+                <h1>Activity Dashboard</h1>
+                <p>Your work at a glance.</p>
+            </div>
+            <div class="status">
+                <span class="status-badge">Live</span>
+                <span class="status-label">All systems operational</span>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button class="btn btn-primary" type="button">New Project</button>
+            <button class="btn btn-secondary" type="button">View Archive</button>
+            <button class="btn btn-ghost" type="button">Export Data</button>
+        </section>
+
+        <section class="workflow" aria-labelledby="workflow-title">
+            <div class="workflow-heading">
+                <h2 id="workflow-title">Project workflow</h2>
+                <p>Follow a project from planning to completion.</p>
+            </div>
+            <div class="workflow-track" aria-hidden="true">
+                <svg class="workflow-route" viewBox="0 0 520 90" role="presentation">
+                    <path id="workflow-route-path" d="M 12 58 C 95 58, 100 18, 180 18 S 265 72, 345 58 S 430 20, 508 30" />
+                    <circle class="workflow-finish" cx="508" cy="30" r="8" />
+                </svg>
+                <span class="workflow-marker"></span>
+            </div>
+            <ol class="workflow-stages">
+                <li>Planned</li>
+                <li>In Progress</li>
+                <li>Complete</li>
+            </ol>
+        </section>
+
+        <section class="card-grid">
+
+            <article class="card">
+                <div class="card-header">
+                    <h2>Design Tokens</h2>
+                    <span class="card-tag">Complete</span>
+                </div>
+                <p>Color, spacing, and type tokens organized into a token-first architecture with dark mode support.</p>
+                <a href="#" class="card-link">View work &rarr;</a>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <h2>Grid Layouts</h2>
+                    <span class="card-tag">Complete</span>
+                </div>
+                <p>Editorial layout with named grid areas and a responsive auto-fit card grid that adapts without breakpoints.</p>
+                <a href="#" class="card-link">View work &rarr;</a>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <h2>Type Scale</h2>
+                    <span class="card-tag">Complete</span>
+                </div>
+                <p>Fluid typography using clamp() and a modular scale with web fonts loaded for performance.</p>
+                <a href="#" class="card-link">View work &rarr;</a>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <h2>Motion</h2>
+                    <span class="card-tag card-tag--active">In Progress</span>
+                </div>
+                <p>Transitions, keyframe animations, and reduced-motion support applied across the portfolio.</p>
+                <a href="#" class="card-link">View work &rarr;</a>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <h2>SVG Icons</h2>
+                    <span class="card-tag card-tag--pending">Up Next</span>
+                </div>
+                <p>Accessible SVG sprite system using symbol and use with currentColor theming.</p>
+                <a href="#" class="card-link">View work &rarr;</a>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <h2>Portfolio</h2>
+                    <span class="card-tag card-tag--pending">Up Next</span>
+                </div>
+                <p>Capstone project showcasing the full toolkit built throughout this course.</p>
+                <a href="#" class="card-link">View work &rarr;</a>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

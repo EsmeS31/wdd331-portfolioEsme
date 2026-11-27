@@ -6,7 +6,7 @@
     --space-sm: var(--spacing-sm);
     --space-md: var(--spacing-md);
 
-    --font-body: var(--font-family-sans);
+    --font-body: var(--font-family-body);
 
     --radius-pill: 999px;
 }

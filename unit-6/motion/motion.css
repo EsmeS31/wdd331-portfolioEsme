@@ -1,0 +1,274 @@
+/* Center the page and keep the text from stretching too wide. */
+.site-header,
+main {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    padding-block: 1.5rem;
+}
+
+main {
+    margin-bottom: 2rem;
+    padding: clamp(1rem, 4vw, 2.5rem);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    background: var(--color-surface);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-header p {
+    margin-top: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    background: var(--color-bg);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.card h2 {
+    font-size: var(--font-size-heading-sm);
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+}
+
+.workflow {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    background: var(--color-bg);
+}
+
+.workflow-heading h2 {
+    font-size: var(--font-size-heading-sm);
+}
+
+.workflow-heading p {
+    margin-top: 0.25rem;
+}
+
+.workflow-track,
+.workflow-stages {
+    width: min(100%, 520px);
+}
+
+.workflow-track {
+    position: relative;
+    height: 90px;
+    margin-top: 0.75rem;
+}
+
+.workflow-route {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.workflow-route path {
+    fill: none;
+    stroke: var(--color-link);
+    stroke-width: 3;
+    stroke-dasharray: 6 5;
+}
+
+.workflow-finish {
+    fill: var(--color-bg);
+    stroke: var(--color-link);
+    stroke-width: 3;
+}
+
+.workflow-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    background: var(--color-accent);
+    offset-path: path('M 12 58 C 95 58, 100 18, 180 18 S 265 72, 345 58 S 430 20, 508 30');
+    offset-distance: 100%;
+    offset-rotate: auto;
+    offset-anchor: center;
+    offset-position: 0 0;
+}
+
+.workflow-stages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--font-size-caption);
+    font-weight: 600;
+}
+
+.workflow-stages li:nth-child(2) {
+    text-align: center;
+}
+
+.workflow-stages li:last-child {
+    text-align: right;
+    color: var(--color-link);
+}
+
+@media (max-width: 40rem) {
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* Keep the motion simple and only use it when the user allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+    /* Links move and change color when they are hovered or focused. */
+    .site-header nav a {
+        transition: color 180ms ease-out, background-color 180ms ease-out,
+            transform 180ms ease-out;
+    }
+
+    .site-header nav a:hover,
+    .site-header nav a:focus-visible {
+        transition: color 120ms ease-out, background-color 120ms ease-out,
+            transform 120ms ease-out;
+        transform: translateY(-2px);
+    }
+
+    .site-header nav .nav-cta {
+        transition: background-color 200ms ease, color 200ms ease,
+            transform 200ms ease;
+    }
+
+    .site-header nav .nav-cta:hover,
+    .site-header nav .nav-cta:focus-visible {
+        transition: background-color 140ms ease, color 140ms ease,
+            transform 140ms ease;
+        transform: translateY(-2px);
+    }
+
+    /* Buttons have a small lift to show that they can be clicked. */
+    .btn {
+        transition: background-color 180ms ease, color 180ms ease,
+            box-shadow 180ms ease, transform 180ms ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+        transition: background-color 120ms ease, color 120ms ease,
+            box-shadow 120ms ease, transform 120ms ease;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible,
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+        transition: background-color 140ms ease, color 140ms ease,
+            box-shadow 140ms ease, transform 140ms ease;
+        transform: translateY(-1px);
+    }
+
+    /* Cards lift gently, and their links have their own color transition. */
+    .card {
+        transition: box-shadow 220ms ease-out, transform 220ms ease-out;
+    }
+
+    .card:hover {
+        transition: box-shadow 140ms ease-out, transform 140ms ease-out;
+        transform: translateY(-4px);
+    }
+
+    .card-link {
+        transition: color 180ms ease, transform 180ms ease;
+    }
+
+    .card-link:hover,
+    .card-link:focus-visible {
+        transition: color 120ms ease, transform 120ms ease;
+        transform: translateX(3px);
+    }
+
+    /* A slow pulse makes the Live badge feel active. */
+    .status-badge {
+        animation: live-pulse 1.8s ease-in-out infinite alternate;
+    }
+
+    /* The marker travels once to show a project moving through the workflow. */
+    .workflow-marker {
+        animation: show-workflow 1.2s ease-out 1 forwards;
+    }
+
+    @keyframes show-workflow {
+        from {
+            offset-distance: 0%;
+        }
+
+        to {
+            offset-distance: 100%;
+        }
+    }
+
+    @keyframes live-pulse {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        to {
+            transform: scale(1.06);
+            opacity: 0.75;
+        }
+    }
+}
+
+/* Keep a clear, still status badge for people who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+    .status-badge {
+        animation: none;
+        box-shadow: 0 0 0 2px currentColor;
+    }
+
+    /* Show the completed state without making the marker travel. */
+    .workflow-marker {
+        animation: none;
+        offset-distance: 100%;
+    }
+}

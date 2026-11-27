@@ -39,6 +39,7 @@ tuned in the same token file. DM Sans is loaded for headings with
 system sans-serif stack for comfortable reading.
 
 ## Pages
+- [BYU-Idaho Home Reimagined](unit-7/reimagined-home/) — [View on Pages](https://esmes31.github.io/wdd331-portfolioEsme/unit-7/reimagined-home/) (student work)
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
@@ -48,6 +49,7 @@ system sans-serif stack for comfortable reading.
 - [Card Grid](unit-4/grid-layouts/cards.html)
 - [Container Queries](unit-4/advanced/container-demo.html)
 - [Sticky Sidebar](unit-4/advanced/sticky-demo.html)
+- [Meaningful Motion](unit-6/motion/index.html)
 - [Resume](resume.html)
 - [Contact](contact.html)
 
