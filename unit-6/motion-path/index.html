@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A small interactive CSS motion path demo.">
+    <title>CSS Motion Path Demo</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="motion-path.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../motion/index.html">Meaningful Motion</a>
+        <a href="index.html" aria-current="page">CSS Motion Path</a>
+      </nav>
+    </header>
+    <main class="motion-path-page">
+      <header>
+        <p class="eyebrow">CSS animation demonstration</p>
+        <h1>Follow the road</h1>
+        <p class="intro">Watch the red triangle travel along a curve. The dashed road is an inline SVG; the mover follows matching path data in CSS.</p>
+      </header>
+
+      <section class="demo-section" aria-labelledby="demo-heading">
+        <h2 id="demo-heading">Motion path demo</h2>
+        <div class="demo" id="demo">
+          <svg class="route" viewBox="0 0 400 200" role="img" aria-label="A curved road from left to right">
+            <path class="road-shadow" d="M 20 100 C 100 20, 300 20, 380 100" />
+            <path class="road-center" d="M 20 100 C 100 20, 300 20, 380 100" />
+            <path class="straight-road" d="M 20 100 L 380 100" />
+            <circle class="endpoint" cx="20" cy="100" r="5" />
+            <circle class="endpoint" cx="380" cy="100" r="5" />
+          </svg>
+          <div class="mover" aria-hidden="true"></div>
+          <span class="label label-start">START</span>
+          <span class="label label-end">FINISH</span>
+        </div>
+
+        <div class="controls" aria-label="Demo controls">
+          <button type="button" id="rotation-toggle" aria-pressed="true">Rotation: auto</button>
+          <button type="button" id="line-toggle" aria-pressed="false">Show straight-line comparison</button>
+        </div>
+        <p class="hint">Use the controls to compare automatic rotation and a straight route. To demonstrate reduced motion, enable “Emulate CSS prefers-reduced-motion” in your browser’s DevTools.</p>
+        <p class="motion-status" id="motion-status" aria-live="polite"></p>
+      </section>
+
+      <section class="explanation">
+        <h2>What to notice</h2>
+        <ul>
+          <li><code>offset-path</code> defines the route.</li>
+          <li><code>offset-distance</code> moves the marker from 0% to 100% of that route.</li>
+          <li><code>offset-rotate: auto</code> turns the marker to face its direction of travel.</li>
+          <li>When reduced motion is requested, the marker stays at its destination without animating.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      const demo = document.querySelector("#demo");
+      const rotationToggle = document.querySelector("#rotation-toggle");
+      const lineToggle = document.querySelector("#line-toggle");
+      const motionStatus = document.querySelector("#motion-status");
+
+      rotationToggle.addEventListener("click", () => {
+        const useAutoRotation = rotationToggle.getAttribute("aria-pressed") !== "true";
+        rotationToggle.setAttribute("aria-pressed", String(useAutoRotation));
+        rotationToggle.textContent = `Rotation: ${useAutoRotation ? "auto" : "0deg"}`;
+        demo.classList.toggle("no-auto-rotation", !useAutoRotation);
+      });
+
+      lineToggle.addEventListener("click", () => {
+        const showStraightLine = lineToggle.getAttribute("aria-pressed") !== "true";
+        lineToggle.setAttribute("aria-pressed", String(showStraightLine));
+        lineToggle.textContent = showStraightLine
+          ? "Show curved path"
+          : "Show straight-line comparison";
+        demo.classList.toggle("is-straight", showStraightLine);
+      });
+
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const updateMotionStatus = () => {
+        motionStatus.textContent = reducedMotion.matches
+          ? "Reduced motion is on. The marker is resting at the finish."
+          : "Animation is on. The marker is traveling along the route.";
+      };
+      reducedMotion.addEventListener("change", updateMotionStatus);
+      updateMotionStatus();
+    </script>
+  </body>
+</html>

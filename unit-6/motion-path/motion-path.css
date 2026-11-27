@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+.motion-path-page {
+  width: min(100% - 2rem, 760px);
+  margin: 0 auto 2rem;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #356b93;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1.05;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.intro {
+  max-width: 58ch;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.demo-section,
+.explanation {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid #d8e2eb;
+  border-radius: 1rem;
+  background: #fff;
+  color: #183047;
+  box-shadow: 0 0.5rem 1.8rem rgb(24 48 71 / 6%);
+}
+
+.demo {
+  position: relative;
+  width: min(100%, 400px);
+  aspect-ratio: 2 / 1;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #dbe5ee;
+  border-radius: 0.75rem;
+  background: linear-gradient(#fff, #f8fbfe);
+}
+
+.route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.road-shadow,
+.road-center,
+.straight-road {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.road-shadow {
+  stroke: #d4e0eb;
+  stroke-width: 18;
+}
+
+.road-center {
+  stroke: #71869a;
+  stroke-width: 2;
+  stroke-dasharray: 7 7;
+}
+
+.straight-road {
+  display: none;
+  stroke: #71869a;
+  stroke-width: 3;
+  stroke-dasharray: 7 7;
+}
+
+.endpoint {
+  fill: #183047;
+}
+
+.mover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: #e35b46;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  filter: drop-shadow(0 2px 4px rgb(24 48 71 / 35%));
+
+  /* This matches the SVG d attribute below and the 400 × 200 viewBox. */
+  offset-path: path("M 20 100 C 100 20, 300 20, 380 100");
+  offset-distance: 100%;
+  offset-rotate: auto;
+}
+
+.label {
+  position: absolute;
+  top: calc(50% + 1.2rem);
+  color: #536a7f;
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.label-start {
+  left: 2.5%;
+}
+
+.label-end {
+  right: 2.5%;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #9db2c5;
+  border-radius: 0.6rem;
+  background: #fff;
+  color: #183047;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #edf5fb;
+}
+
+button:focus-visible {
+  outline: 3px solid #2877b5;
+  outline-offset: 3px;
+}
+
+.hint,
+.motion-status {
+  max-width: 65ch;
+  margin: 1rem auto 0;
+  color: #536a7f;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.motion-status {
+  color: #245b38;
+  font-weight: 650;
+  text-align: center;
+}
+
+.explanation li {
+  margin: 0.55rem 0;
+  line-height: 1.5;
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  background: #edf3f8;
+  font-size: 0.92em;
+}
+
+.demo.no-auto-rotation .mover {
+  offset-rotate: 0deg;
+}
+
+.demo.is-straight .road-shadow,
+.demo.is-straight .road-center {
+  display: none;
+}
+
+.demo.is-straight .straight-road {
+  display: block;
+}
+
+.demo.is-straight .mover {
+  offset-path: path("M 20 100 L 380 100");
+}
+
+@keyframes follow-path {
+  from {
+    offset-distance: 0%;
+  }
+
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mover {
+    animation: follow-path 3s ease-in-out infinite alternate;
+  }
+}
+
+@media (max-width: 480px) {
+  .motion-path-page {
+    padding-top: 2rem;
+  }
+
+  .demo-section,
+  .explanation {
+    padding: 1rem;
+  }
+}
