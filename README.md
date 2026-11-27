@@ -50,6 +50,7 @@ system sans-serif stack for comfortable reading.
 - [Container Queries](unit-4/advanced/container-demo.html)
 - [Sticky Sidebar](unit-4/advanced/sticky-demo.html)
 - [Meaningful Motion](unit-6/motion/index.html)
+- [CSS Motion Path](unit-6/motion-path/index.html)
 - [Resume](resume.html)
 - [Contact](contact.html)
 
